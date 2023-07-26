@@ -34,6 +34,7 @@ for (inner_idx = low; inner_idx < high; inner_idx++)
 	if (array[inner_idx] <= pivot_value)
 	{
 		swap(&array[idx], &array[inner_idx]);
+		print_array(array, size);
 		idx++;
 	}
 }
