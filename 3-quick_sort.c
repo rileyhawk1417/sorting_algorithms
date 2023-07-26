@@ -27,8 +27,8 @@ void swap(int *left, int *right)
 */
 int partition_array(int *array, int low, int high, size_t size)
 {
-size_t pivot_value = array[high];
-size_t idx = low, inner_idx = low;
+int pivot_value = array[high];
+int idx = low, inner_idx = low;
 for (inner_idx = low; inner_idx < high; inner_idx++)
 {
 	if (array[inner_idx] <= pivot_value)
