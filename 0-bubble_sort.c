@@ -1,6 +1,13 @@
 #include "sort.h"
 #include <stdbool.h>
 
+/**
+* swap_digits - entry point
+* @left: digit on the right
+* @right: digit on the left
+* Description: simply swaps the digits
+* * Returns: Nothing
+*/
 void swap_digits(int *left, int *right)
 {
 int tmp = 0;
@@ -33,6 +40,7 @@ for (inner_idx = 0; inner_idx < (size - idx - 1); inner_idx++)
 {
 	if (array[inner_idx] > array[inner_idx + 1])
 	{
+		/*NOTE: Had moved the swap into a function for readability */
 		swap_digits(&array[inner_idx], &array[inner_idx + 1]);
 		swapped_value = true;
 		print_array(array, size);
@@ -42,6 +50,6 @@ for (inner_idx = 0; inner_idx < (size - idx - 1); inner_idx++)
 	if (swapped_value == false)
 		break;
 
-} 
+}
 
 }
