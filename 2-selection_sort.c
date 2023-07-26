@@ -23,9 +23,9 @@ if (min_pos != idx)
 tmp = array[idx];
 array[idx] = array[min_pos];
 array[min_pos] = tmp;
+print_array(array, size);
 }
 
-print_array(array, size);
 }
 
 }
