@@ -33,13 +33,19 @@ for (inner_idx = low; inner_idx < high; inner_idx++)
 {
 	if (array[inner_idx] <= pivot_value)
 	{
+		if (idx != inner_idx)
+		{
 		swap(&array[idx], &array[inner_idx]);
 		print_array(array, size);
+		}
 		idx++;
 	}
 }
+if (idx != high)
+{
 swap(&array[idx], &array[high]);
 print_array(array, size);
+}
 return (idx);
 }
 
